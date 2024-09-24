@@ -13,7 +13,7 @@ frontend:
         - flutter build web --release  # Build Flutter web app for release
 
   artifacts:
-    baseDirectory: bismillah/web
+    baseDirectory: /web
     files:
       - '**/*'
 
