@@ -7,7 +7,7 @@ frontend:
         - git clone https://github.com/flutter/flutter.git -b stable
         - export PATH="$PATH:`pwd`/flutter/bin"
         - flutter --version  # Verify Flutter installation
-        - cd $CODEBUILD_SRC_DIR/ bismillah # Change directory to your Flutter project directory
+        
         - flutter pub get  # Install dependencies
         - flutter clean  # Clean any existing build artifacts
         - flutter build web --release  # Build Flutter web app for release
