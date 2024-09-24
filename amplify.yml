@@ -7,20 +7,20 @@ frontend:
         - git clone https://github.com/flutter/flutter.git -b stable
         - export PATH="$PATH:`pwd`/flutter/bin"
         - flutter --version  # Verify Flutter installation
-        - cd $CODEBUILD_SRC_DIR/flutter-app  # Change directory to your Flutter project directory
+        - cd $CODEBUILD_SRC_DIR/ bismillah # Change directory to your Flutter project directory
         - flutter pub get  # Install dependencies
         - flutter clean  # Clean any existing build artifacts
         - flutter build web --release  # Build Flutter web app for release
 
   artifacts:
-    baseDirectory: /build/web
+    baseDirectory: bismillah/web
     files:
       - '**/*'
 
   cache:
     paths:
       - $HOME/.pub-cache
-      - flutter-app/.dart_tool/build
+      - bismillah/.dart_tool/build
 
 # Optionally, you can add backend configuration here if needed
 
@@ -39,3 +39,4 @@ backend:
   cache:
     paths:
       - /root/.pub-cache
+
